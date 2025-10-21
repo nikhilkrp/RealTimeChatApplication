@@ -31,21 +31,21 @@ const LoginPage = () => {
   };
 
   return (
-    <div className="backdrop-blur-md h-[100vh] w-[100vw] bg-contain border sm:px-[15%] sm:py-[5%]">
-      <div className="flex flex-row items-center justify-evenly text-white my-auto">
-        <div>
-          <img src={assets.logo_big} alt="logo" className="w-[40%]" />
+    <div className="backdrop-blur-md h-[100vh] w-[100vw] bg-contain border flex justify-center items-center sm:px-[12%] sm:py-[5%]">
+      <div className="flex flex-row items-center justify-evenly  text-white my-auto">
+        <div className="md:block hidden"> 
+          <img src={assets.logo_big} alt="logo" className="w-[50%]" />
         </div>
 
         {/* SIGNUP FORM */}
         {!show && (
-          <div className="bg-gray-700 bg-opacity-40 border p-6 h-[60vh] rounded-lg flex flex-col justify-center gap-2">
+          <div className="bg-gray-700 bg-opacity-40 border px-10 h-[65vh]  rounded-lg flex flex-col justify-center gap-2">
             <h2 className="mx-auto md:font-extrabold md:text-xl">
               Welcome to We Chat
             </h2>
-            <h2 className="md:font-bold text-xl font-semibold mx-auto">Sign Up</h2>
+            <h2 className="md:font-bold text-xl font-semibold mx-auto text-purple-700">Sign Up</h2>
 
-            <form onSubmit={onSubmitHandler} className="flex flex-col gap-6 mt-4">
+            <form onSubmit={onSubmitHandler} className="flex flex-col gap-6 mt-4 ">
               <input
                 type="text"
                 onChange={(e) => setUserName(e.target.value)}
@@ -66,7 +66,7 @@ const LoginPage = () => {
               />
               <button
                 type="submit"
-                className="bg-gradient-to-r from-purple-800 to-purple-400 mt-6 py-1 rounded-md"
+                className="bg-gradient-to-r from-purple-800 to-purple-400 mt-6 py-1 rounded-md font-semibold"
               >
                 Create Account
               </button>
@@ -91,16 +91,16 @@ const LoginPage = () => {
 
         {/* LOGIN FORM */}
         {show && (
-          <div className="bg-gray-700 bg-opacity-40 border p-6 h-[55vh] rounded-lg flex flex-col  gap-1">
+          <div className="bg-gray-700 bg-opacity-40 border p-10 h-[55vh] rounded-lg flex flex-col  gap-1">
             <h2 className="mx-auto font-extrabold text-xl">Welcome to We Chat</h2>
-            <h2 className="md:font-bold text-xl font-semibold mx-auto">Login</h2>
+            <h2 className="md:font-bold text-xl font-semibold mx-auto text-purple-700">Login</h2>
 
             <form onSubmit={onSubmitHandler} className="flex flex-col gap-6 mt-4">
               <input
                 type="email"
                 onChange={(e) => setEmail(e.target.value)}
                 placeholder="Email"
-                className="bg-gray-500 bg-opacity-40 rounded-md p-1 border-[1px] border-gray-300"
+                className="bg-gray-500 bg-opacity-40 rounded-md p-1 border-[1px] border-gray-300 "
               />
               <input
                 type="password"
