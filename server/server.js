@@ -16,13 +16,13 @@ app.use(cookieParser());
 const server = http.createServer(app)
 
 
-
 app.use(cors({
   // origin: "http://localhost:5173",  
-  origin: "https://real-time-chat-application-git-main-nikhils-projects-9dc5e1f8.vercel.app",  
+  origin: "https://real-time-chat-application-orpin.vercel.app",  
   methods: ["GET", "POST", "PUT", "DELETE"],
   credentials: true          
 }));
+
 
 // initialize socket.io server
 
