@@ -24,11 +24,8 @@ const LoginPage = () => {
       const credentials = show ? { email, password }
       : { username, email, password };
 
-        console.log("hii")
-
       await login(state, credentials);
     } catch (error) {
-        console.log("hii")
       toast.error(error.message);
     }
   };
