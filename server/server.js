@@ -18,19 +18,19 @@ const server = http.createServer(app)
 
 
 app.use(cors({
-  origin: "http://localhost:5173",  // Vite frontend
-  // origin: "https://real-time-chat-application-git-main-nikhils-projects-9dc5e1f8.vercel.app",  // Vite frontend
+  // origin: "http://localhost:5173",  
+  origin: "https://real-time-chat-application-git-main-nikhils-projects-9dc5e1f8.vercel.app",  
   methods: ["GET", "POST", "PUT", "DELETE"],
-  credentials: true                // allow cookies/headers
+  credentials: true          
 }));
 
 // initialize socket.io server
 
 export const io = new Server(server, {
   cors: {
-    origin: "http://localhost:5173",  // your React app
+    origin: "http://localhost:5173", 
     methods: ["GET", "POST"],
-    credentials: true,                // allow cookies or token headers
+    credentials: true,               
   },
 });
 
