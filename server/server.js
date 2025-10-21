@@ -18,7 +18,8 @@ const server = http.createServer(app)
 
 
 app.use(cors({
-  origin: "http://localhost:5173",  // Vite frontend
+  // origin: "http://localhost:5173",  // Vite frontend
+  origin: "https://real-time-chat-application-git-main-nikhils-projects-9dc5e1f8.vercel.app/",  // Vite frontend
   methods: ["GET", "POST", "PUT", "DELETE"],
   credentials: true                // allow cookies/headers
 }));
