@@ -52,7 +52,7 @@ const ProfilePage = () => {
 
   return (
     <div className="flex items-center justify-center h-[100vh] w-[100vw] backdrop-blur-md border sm:px-[15%] sm:py-[5%]">
-      <div className="flex flex-row items-center justify-evenly text-white border h-[60vh] w-[45vw] rounded-lg gap-6">
+      <div className="flex flex-row items-center justify-between text-white border h-[55vh] w-[70vw] md:w-[45vw] rounded-lg gap-6">
         <form onSubmit={handleSubmit} className="flex flex-col gap-4">
           <h3 className="font-bold text-lg">Profile details</h3>
 
@@ -65,12 +65,12 @@ const ProfilePage = () => {
           />
           <label
             htmlFor="image"
-            className="flex justify-center items-center gap-4 font-bold text-md cursor-pointer"
+            className="flex md:flex-row flex-col justify-center items-center gap-4 font-bold text-md cursor-pointer"
           >
             <img
               src={selectedImg ? URL.createObjectURL(selectedImg) : authUser.profile || assets.avatar_icon}
               alt="avatar"
-              className="h-14 rounded-full"
+              className="md:h-14 h-10 rounded-full"
             />
             Upload Profile Image
           </label>

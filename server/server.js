@@ -29,6 +29,7 @@ app.use(cors({
 export const io = new Server(server, {
   cors: {
     origin: "https://real-time-chat-application-orpin.vercel.app", 
+    // origin: "http://localhost:5173", 
     methods: ["GET", "POST"],
     credentials: true,               
   },

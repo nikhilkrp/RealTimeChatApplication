@@ -53,7 +53,7 @@ const handleSendImage = async(e)=>{
       
       {/* header */}
       <div className="flex-shrink-0 py-3 mx-4 flex items-center bg-opacity-90">
-        <img className="w-8 rounded-full" src={selectedUser.profile||assets.avatar_icon} alt="profile" />
+        <img className="w-8 h-8 rounded-full" src={selectedUser.profile||assets.avatar_icon} alt="profile" />
         <p className="text-white text-lg flex-1 flex items-center gap-2 px-2">
           {selectedUser.username}
           {onlineUsers.includes(selectedUser._id)&&<span className="h-4 w-4 rounded-full bg-green-400"></span>}
@@ -105,7 +105,7 @@ const handleSendImage = async(e)=>{
                     :selectedUser?.profile || assets.avatar_icon
                 }
                 alt="avatar"
-                className="w-7 rounded-full"
+                className="w-7 h-7 rounded-full"
               />
               <p className="text-gray-500">{fromatMessageTime(msg.createdAt)}</p>
             </div>
